@@ -45,21 +45,13 @@ function moveObstacle(delta) {
 
 function checkCollision() {
     // Small insets make collisions match the visible shapes more naturally.
-    return obstacles.some(obstacle =>
-        CHARACTER_X + CHARACTER_WIDTH - 5 > obstacle.x + 3 &&
-        CHARACTER_X + 5 < obstacle.x + obstacle.width - 3 &&
-        height + 4 < obstacle.height &&
-        height + CHARACTER_HEIGHT > 0
+  
     );
 }
 
+// Ends the game and displays the final score.
 function endGame() {
-    state = "over";
-    document.getElementById("status-title").textContent = "Nice run!";
-    document.getElementById("status-message").textContent = `Final score: ${score}. Ready for another try?`;
-    startButton.textContent = "Play again";
-    overlay.hidden = false;
-    announcement.textContent = `Game over. Final score: ${score}. Press R or Play again to restart.`;
+
 }
 
 function startGame() {
