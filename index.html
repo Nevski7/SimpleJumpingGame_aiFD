@@ -9,7 +9,24 @@
 </head>
 <body>
     <main class="game-wrapper">
-      
+        <header class="game-header">
+            <div><p class="eyebrow">A little leap goes a long way</p><h1>Desert Jumper</h1></div>
+            <div class="scoreboard">Score <strong id="score">0</strong></div>
+        </header>
+        <p class="instructions" id="instructions">Press Space or ↑ to jump over the cacti. Each cactus cleared earns a point.</p>
+        <section class="game" id="game" aria-label="Jumping game" aria-describedby="instructions">
+            <div class="sun" aria-hidden="true"></div>
+            <div class="dunes" aria-hidden="true"></div>
+            <div id="character" class="character" aria-hidden="true"><span class="eye"></span></div>
+            <div class="ground" aria-hidden="true"></div>
+            <div class="overlay" id="overlay">
+                <h2 id="status-title">Ready to leap?</h2>
+                <p id="status-message">Time your jumps and keep going.</p>
+                <button id="start-button" type="button">Start game</button>
+            </div>
+        </section>
+        <footer class="game-footer"><span>SPACE / ↑ to jump · R to restart</span><button id="jump-button" type="button">Jump ↑</button></footer>
+        <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
     </main>
 </body>
 </html>
